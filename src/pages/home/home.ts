@@ -7,6 +7,8 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
 
+ nombre_propiedad:string = 'Esto es un test';
+
   constructor(public navCtrl: NavController) {
 
   }
