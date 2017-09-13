@@ -11,5 +11,4 @@ export class ContactPage {
 
   }
 
-nombre_propiedad:string = 'Esto es un test';
 }
