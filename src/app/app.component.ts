@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Platform,AlertCOntroller } from 'ionic-angular';
+import { Platform, AlertController } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { OneSignal } from '@ionic-native/onesignal';
@@ -15,7 +15,7 @@ export class MyApp {
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen,
 private oneSignal: OneSignal,
-    private alertCtrl: AlertController
+private alertCtrl: AlertController
   ) {
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
