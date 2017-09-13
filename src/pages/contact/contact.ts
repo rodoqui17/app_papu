@@ -8,7 +8,8 @@ import { NavController } from 'ionic-angular';
 export class ContactPage {
 
   constructor(public navCtrl: NavController) {
-nombre_propiedad:string = 'Esto es un test';
+
   }
 
+nombre_propiedad:string = 'Esto es un test';
 }
