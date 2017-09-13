@@ -33,7 +33,7 @@ private alertCtrl: AlertController
     let alert = this.alertCtrl.create({
       title: jsonData.notification.payload.title,
       subTitle: jsonData.notification.payload.body,
-      buttons: ['OK']
+      buttons: ['Ver Solicitud']
     });
     alert.present();
     console.log('notificationOpenedCallback: ' + JSON.stringify(jsonData));
