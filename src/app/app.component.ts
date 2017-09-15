@@ -3,8 +3,6 @@ import { Platform, AlertController } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { OneSignal } from '@ionic-native/onesignal';
-
-
 import { TabsPage } from '../pages/tabs/tabs';
 
 @Component({

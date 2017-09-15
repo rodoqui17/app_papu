@@ -12,9 +12,6 @@ Habilidad:string;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
  this.MyParam =this.navParams.get('status');
  this.Habilidad =this.navParams.get('habilidad');
- alert(this.MyParam);
- alert(this.Habilidad);
-
  }
 
 }
