@@ -16,7 +16,7 @@ export class ContactPage {
 
    
 perfil(){
-	this.navCtrl.push(AboutPage, { status: 'Rodrigo',habilidad: 'cocinar'})
+	this.navCtrl.push(AboutPage, { status: 'Rodri',habilidad: 'cocinar'})
 
 }
 
