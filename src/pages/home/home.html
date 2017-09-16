@@ -1,19 +1,21 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="primary">
     <ion-title>Inicio</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
   <div align="center">
-  <img src="https://png.icons8.com/collaboration/ultraviolet/50" title="Collaboration" width="50" height="50">
+  <img src="assets/img/logo.png" title="Collaboration" width="150" height="150">
   </div>
+  <h3 align="center">Papu.com</h3>
    <p align="center">
-    Encuentra el cuidador ideal el momento que más lo necesites
+Servicios de cuidado a domicilio
   </p>
-<h3>¿Que servicio Buscas?</h3>
-<ion-item>
-  <ion-label>Servicio</ion-label>
+  <ion-card>
+
+  <ion-item>
+  <ion-label color="primary" floating>Selecciona el Servicio</ion-label>
   <ion-select>
     <ion-option>Cuidado de Niños</ion-option>
     <ion-option>Cuidado de Adultos</ion-option>
@@ -22,50 +24,50 @@
 
   </ion-select>
 </ion-item>
+</ion-card>
 
-<h3>¿Que Día?</h3>
 <ion-card>
 <ion-card-content>
 <ion-list>
 <ion-item>
-<ion-label>
-Fecha
+<ion-label color="primary" floating>
+Eligue el día
 </ion-label>
 <ion-datetime
 displayFormat="DD/MM/YYYY" pikerFormat="YYYY MM DD" [(ngModel)]="fechaCorta" cancelText ="Cancelar" doneText="OK" min = {{minFecha}} max = {{maxFecha}}
 >
 </ion-datetime>
 </ion-item>
-<ion-item>
+<!-- <ion-item>
 <p text-center> Valor de fecha: {{fechaCorta.substr(0,10)}}</p>
-</ion-item>
+</ion-item> -->
 </ion-list>
 </ion-card-content>
 </ion-card>
 
-<h3>¿Que Hora?</h3>
+
 <ion-card>
 <ion-card-content>
 <ion-list>
 <ion-item>
-<ion-label>
-Hora
+<ion-label color="primary" floating>
+Dinos la Hora
 </ion-label>
 <ion-datetime
 displayFormat="HH:mm" pikerFormat="HH:mm" [(ngModel)]="fecha" cancelText ="Cancelar" doneText="OK"
 >
 </ion-datetime>
 </ion-item>
-<ion-item>
+<!-- <ion-item>
 <p text-center> Valor de fecha: {{fecha.substr(11,5)}}</p>
-</ion-item>
+</ion-item> -->
 </ion-list>
 </ion-card-content>
 </ion-card>
 
-<h3>¿Que zona?</h3>
+<ion-card>
 <ion-item>
-  <ion-label>Zona</ion-label>
+  <ion-label color="primary" floating>Seleccióna la Zona</ion-label>
   <ion-select>
     <ion-option>San Pedro</ion-option>
     <ion-option>Miraflores</ion-option>
@@ -77,7 +79,7 @@ displayFormat="HH:mm" pikerFormat="HH:mm" [(ngModel)]="fecha" cancelText ="Cance
 
   </ion-select>
 </ion-item>
-
-<button (click)="buscar()" ion-button full align="center">Buscar</button>
+</ion-card>
+<button (click)="buscar()" ion-button block align="center">Buscar</button>
 
   </ion-content>
