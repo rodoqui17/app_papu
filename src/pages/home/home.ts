@@ -9,20 +9,35 @@ import { ContactPage } from '../contact/contact';
 export class HomePage {
 
 
-   constructor(public navCtrl: NavController) {
+
+
+    constructor(public navCtrl: NavController) {
 
   }
 
 
+servicios = [
+        {"nombre": 'Cuidado de niños'},
+        {"nombre": 'Cuidado de adultos'},
+		{"nombre": 'Cuidado de mascotas'},
+        {"nombre": 'Cuidado del hogar'} 
+      ];
 
+      zonas = [
+        { "nombre": 'San Pedro'},
+        { "nombre": 'Sopocachi'},
+        { "nombre": 'Miraflores'},
+        { "nombre": 'Obrajes'}, 
+      ];
 
 fechaCorta: string = new Date().toISOString();
   fecha: string = this.fechaCorta;
+  servicio:string = this.servicio;
   minFecha: string = (new Date().getFullYear()-5).toString();
   maxFecha: string = (new Date().getFullYear()+5).toString();
-
-  buscar(){
-	this.navCtrl.push(ContactPage, { status: 'Rodrigo',habilidad: 'cocinar'})
+  buscar(val:string){
+	this.navCtrl.push(ContactPage, { servicio: val})
+	alert(val);
 
 }
 

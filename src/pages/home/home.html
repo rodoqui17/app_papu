@@ -15,12 +15,8 @@ Servicios de cuidado a domicilio
  <ion-card>
   <ion-item>
   <ion-label color="primary" floating>Selecciona el Servicio</ion-label>
-  <ion-select>
-    <ion-option>Cuidado de Niños</ion-option>
-    <ion-option>Cuidado de Adultos</ion-option>
-    <ion-option>Cuidado de Mascotas</ion-option>
-    <ion-option>Cuidado del Hogar</ion-option>
-
+  <ion-select [(ngModel)]="servicio" >
+    <ion-option *ngFor="let servicio of servicios">{{servicio.nombre}}</ion-option>
   </ion-select>
 </ion-item>
 </ion-card>
@@ -68,17 +64,11 @@ displayFormat="HH:mm" pikerFormat="HH:mm" [(ngModel)]="fecha" cancelText ="Cance
 <ion-item>
   <ion-label color="primary" floating>Seleccióna la Zona</ion-label>
   <ion-select>
-    <ion-option>San Pedro</ion-option>
-    <ion-option>Miraflores</ion-option>
-    <ion-option>Obrajes</ion-option>
-    <ion-option>Calacoto</ion-option>
-    <ion-option>Sopocachi</ion-option>
-    <ion-option>Irpavi</ion-option>
-    <ion-option>Achumani</ion-option>
-
+    <ion-option *ngFor="let zona of zonas">{{zona.nombre}}</ion-option>
   </ion-select>
 </ion-item>
 </ion-card>
-<button (click)="buscar()" ion-button block align="center">Buscar</button>
+
+<button (click)="buscar(servicio)" ion-button block align="center">Buscar</button>
 
   </ion-content>
